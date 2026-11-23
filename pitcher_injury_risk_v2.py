@@ -6,7 +6,7 @@ Identifies pitchers at highest injury risk heading into the playoffs
 based on regular-season workload profiles only.
 
 Usage:
-    python3 pitcher_injury_risk.py
+    python3 pitcher_injury_risk_v2.py
 
 Outputs (in FOLDER_PATH/outputs/):
     pitcher_risk_summary.csv
@@ -32,7 +32,7 @@ pd.set_option("display.max_columns", 40)
 pd.set_option("display.float_format", "{:.2f}".format)
 
 # ── CONFIG ─────────────────────────────────────────────────────────────────────
-FOLDER_PATH = Path("/Users/pranayratan/Desktop/AdvancedLevel_SSAC Sport Med Hackathon 2026 copy")
+FOLDER_PATH = Path(__file__).resolve().parent  # repo root: game CSVs, player_pitching.csv, injuries.csv
 OUTPUT_PATH = FOLDER_PATH / "outputs" / "v2"
 OUTPUT_PATH.mkdir(exist_ok=True)
 
